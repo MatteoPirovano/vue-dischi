@@ -5,8 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0-0/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 </head>
 <body>
-
+  <div id="root">
+    <div v-for="album in albums"  class="container">
+      <img :src="album.poster" :alt="album.title">
+      <div class="informations">
+        <h4>{{album.title}}</h4>
+        <p>{{album.author}}</p>
+        <p>{{album.year}}</p>
+      </div>
+    </div>
+  </div>
+  <script src="js/script.js" charset="utf-8"></script>
 </body>
 </html>
